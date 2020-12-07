@@ -11,11 +11,11 @@ package edu.nmsu.cs.circles;
 
 import org.junit.*;
 
-public class Circle1Test
+public class Circle2Test
 {
 	// Data you need for each test case
-	private Circle1 circle1;
-   private Circle1 newCircle;
+	private Circle2 circle2;
+   private Circle2 newCircle;
 
 	//
 	// Stuff you want to do before each test case
@@ -24,7 +24,7 @@ public class Circle1Test
 	public void setup()
 	{
 		System.out.println("\nTest starting...");
-		circle1 = new Circle1(1, 2, 3);
+		circle2 = new Circle2(1, 2, 3);
 	}
 
 	//
@@ -44,7 +44,7 @@ public class Circle1Test
 	{
 		Point p;
 		System.out.println("Running test simpleMove.");
-		p = circle1.moveBy(1, 1);
+		p = circle2.moveBy(1, 1);
 		Assert.assertTrue(p.x == 2 && p.y == 3);
 	}
 
@@ -56,7 +56,7 @@ public class Circle1Test
 	{
 		Point p;
 		System.out.println("Running test simpleMoveNeg.");
-		p = circle1.moveBy(-1, -1);
+		p = circle2.moveBy(-1, -1);
 		Assert.assertTrue(p.x == 0 && p.y == 1);
 	}
 
@@ -70,7 +70,7 @@ public class Circle1Test
 		
 		System.out.println("Running test testIntersect.");
 		newCircle = new Circle1(1, 2, 3);
-		Assert.assertTrue(circle1.intersects(newCircle));
+		Assert.assertTrue(circle2.intersects(newCircle));
 	}
 
 
@@ -82,7 +82,7 @@ public class Circle1Test
 	{
 		
 		System.out.println("Running test ScaleTest);
-		double newFactor = circle1.scale(0.5);
+		double newFactor = circle2.scale(0.5);
 		Assert.assertTrue(newFactor == 1.5000000000);
 	}
 
@@ -97,7 +97,7 @@ public class Circle1Test
 		
 		System.out.println("Running test innerCircle");
 		newCircle = new Circle1(1, 2, 2);
-		Assert.assertTrue(circle1.intersects(newCircle));
+		Assert.assertTrue(circle2.intersects(newCircle));
 	}
 
 
@@ -110,7 +110,7 @@ public class Circle1Test
 		
 		System.out.println("Running test testIntersect.");
 		newCircle = new Circle1(3, 2, 3);
-		Assert.assertTrue(circle1.intersects(newCircle));
+		Assert.assertTrue(circle2.intersects(newCircle));
 	}
    
    
@@ -123,7 +123,7 @@ public class Circle1Test
 		
 		System.out.println("Running test outerCircle.");
 		newCircle = new Circle1(13, 13, 3);
-		Assert.assertTrue(circle1.intersects(newCircle));
+		Assert.assertTrue(circle2.intersects(newCircle));
 	}
    
    
